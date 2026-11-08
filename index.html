@@ -200,6 +200,8 @@
   .ph-tag{position:absolute;z-index:2;top:22px;left:22px;right:22px;display:flex;flex-direction:column;gap:4px;padding:14px 16px;border:1px dashed rgba(242,239,233,.45);background:rgba(10,10,10,.28);color:rgba(242,239,233,.72);pointer-events:none}
   .ph-tag b{font-family:var(--display);font-stretch:125%;font-weight:800;font-size:18px;letter-spacing:.14em;text-transform:uppercase}
   .ph-tag small{font-size:12px;letter-spacing:.06em}
+  .m-tiny{font-family:var(--body);font-size:15px;letter-spacing:.04em;fill:#6f6b65}
+  .m-hood{font-family:var(--display);font-stretch:125%;font-weight:600;font-size:13px;letter-spacing:.32em;text-transform:uppercase;fill:rgba(242,239,233,.30)}
   /* Derry map */
   .derry-map{margin-top:20px;border:1px solid var(--line);border-radius:2px;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#17150f 0%,#0a0a0a 72%)}
   .derry-map svg{display:block;width:100%;height:auto}
@@ -213,7 +215,7 @@
   .map-cap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding:18px 24px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
   .map-cap b{color:var(--ink);font-weight:500}
   .map-hint{color:var(--dim);font-size:12px;letter-spacing:.04em}
-  @media(max-width:600px){.m-name{font-size:34px}.m-area{font-size:22px}.m-small{font-size:18px}}
+  @media(max-width:600px){.m-name{font-size:34px}.m-area{font-size:22px}.m-small{font-size:18px}.m-tiny{font-size:19px}.m-hood{font-size:17px}}
 </style>
 </head>
 <body>
@@ -396,6 +398,12 @@
           <text class="m-big" x="40" y="120">Cityside</text>
           <text class="m-big" x="960" y="590" text-anchor="end">Waterside</text>
 
+          <g fill="none" stroke="rgba(242,239,233,.08)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M410 425 C380 400 350 375 320 350 S240 270 120 190 L20 130"/>
+            <path d="M410 425 C480 440 560 450 640 458 S820 478 1000 505"/>
+            <path d="M610 165 C560 150 520 140 470 145 S360 170 300 200"/>
+            <path d="M610 165 C660 185 720 230 780 280 S900 380 1000 420"/>
+          </g>
           <use href="#foyle" fill="none" stroke="rgba(201,164,107,.10)" stroke-width="46" stroke-linecap="round"/>
           <use href="#foyle" fill="none" stroke="rgba(201,164,107,.22)" stroke-width="2"/>
           <use href="#foyle" fill="none" stroke="#c9a46b" stroke-width="1.5" stroke-dasharray="2 12" stroke-linecap="round" opacity=".8">
@@ -409,8 +417,12 @@
             <line x1="599" y1="143" x2="621" y2="187"/>
           </g>
 
-          <rect x="365" y="393" width="12" height="12" transform="rotate(45 371 399)" fill="#c9a46b"/>
-          <text class="m-small" x="350" y="404" text-anchor="end" style="fill:#9c978f">City centre</text>
+          <text class="m-tiny" x="452" y="470">Craigavon Bridge</text>
+          <text class="m-tiny" x="478" y="392">Peace Bridge</text>
+          <text class="m-tiny" x="640" y="200">Foyle Bridge</text>
+          <text class="m-hood" x="560" y="178" text-anchor="end">Shantallow</text>
+          <text class="m-hood" x="800" y="330">Kilfennan</text>
+          <text class="m-tiny" x="985" y="80" text-anchor="end">To Lough Foyle ↗</text>
 
           <g class="m-compass" transform="translate(60 560)">
             <line x1="0" y1="10" x2="0" y2="-30" stroke="#9c978f" stroke-width="1.5"/>
